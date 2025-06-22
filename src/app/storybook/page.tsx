@@ -3,10 +3,11 @@ import Image from "next/image";
 import { List, ListItem, ListItemButton } from "@mui/material";
 import { useSearchParams, useRouter, usePathname } from "next/navigation";
 import { useState } from "react";
-import Conceito from "../components/mui/Conceito";
-import Introducao from "../components/mui/Introducao";
-import BoasPraticas from "../components/mui/BoasPraticas";
-import Personalizacao from "../components/mui/Personalizacao";
+import Conceito from "../components/storybook/Conceito";
+import Introducao from "../components/storybook/Introducao";
+import BoasPraticas from "../components/storybook/BoasPraticas";
+import Interatividade from "../components/storybook/Interatividade";
+import Organizacao from "../components/storybook/Interatividade";
 
 export default function Storybook() {
 	const searchParams = useSearchParams();
@@ -45,23 +46,7 @@ export default function Storybook() {
 						}`}
 				>
 					<ListItemButton onClick={() => mudaPagina("conceito")}>
-						Conceito de Stories
-					</ListItemButton>
-				</ListItem>
-				<ListItem
-					className={`hover:bg-blue-950 ${pagina == "organizacao" && "!bg-slate-950 text-cyan-500"
-						}`}
-				>
-					<ListItemButton onClick={() => mudaPagina("organizacao")}>
-						Organização
-					</ListItemButton>
-				</ListItem>
-				<ListItem
-					className={`hover:bg-blue-950 ${pagina == "interatividade" && "!bg-slate-950 text-cyan-500"
-						}`}
-				>
-					<ListItemButton onClick={() => mudaPagina("interatividade")}>
-						Interatividade
+						Criando Stories
 					</ListItemButton>
 				</ListItem>
 				<ListItem
@@ -72,13 +57,20 @@ export default function Storybook() {
 						Boas Práticas
 					</ListItemButton>
 				</ListItem>
+				<ListItem
+					className={`hover:bg-blue-950`}
+				>
+					<ListItemButton className="after:content-['_↗']" onClick={() => router.push("https://storybook.js.org/docs")}>
+						Documentação Oficial
+					</ListItemButton>
+				</ListItem>
 			</List>
 			<div className="w-[80vw] h-screen flex flex-col px-[10vw] pt-[5vh] gap-4 scrollbar overflow-y-auto">
 				{pagina == "introducao" && <Introducao />}
 				{pagina == "conceito" && <Conceito />}
-				{pagina == "personalizacao" && <Personalizacao />}
+				{pagina == "organizacao" && <Organizacao />}
+				{pagina == "interatividade" && <Interatividade />}
 				{pagina == "boas-praticas" && <BoasPraticas />}
-
 			</div>
 		</main>
 	);

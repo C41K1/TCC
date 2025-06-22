@@ -91,6 +91,13 @@ export default function Tailwind() {
 						Responsividade e Estados
 					</ListItemButton>
 				</ListItem>
+				<ListItem
+					className={`hover:bg-blue-950`}
+				>
+					<ListItemButton className="after:content-['_↗']" onClick={() => router.push("https://tailwindcss.com/docs/styling-with-utility-classes")}>
+						Documentação Oficial
+					</ListItemButton>
+				</ListItem>
 			</List>
 			<div className="w-[80vw] h-screen flex flex-col px-[10vw] pt-[5vh] gap-4 scrollbar overflow-y-auto">
 				{pagina == "introducao" && <Introducao/>}

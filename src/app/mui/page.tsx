@@ -64,6 +64,13 @@ export default function Mui() {
 						Boas Práticas
 					</ListItemButton>
 				</ListItem>
+				<ListItem
+					className={`hover:bg-blue-950`}
+				>
+					<ListItemButton className="after:content-['_↗']" onClick={() => router.push("https://mui.com/material-ui/getting-started/")}>
+						Documentação Oficial
+					</ListItemButton>
+				</ListItem>
 			</List>
 			<div className="w-[80vw] h-screen flex flex-col px-[10vw] pt-[5vh] gap-4 scrollbar overflow-y-auto">
 				{pagina == "introducao" && <Introducao />}

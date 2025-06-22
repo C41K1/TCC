@@ -7,19 +7,16 @@ export default function BoasPraticas() {
             </p>
             <ul className="list-disc list-inside flex flex-col gap-6">
                 <li>
-                    Crie seus próprios componentes com base nos do MUI para reaproveitamento.
+                    Crie stories para todos os estados do componente: padrão, com erro, carregando, desativado etc.
                 </li>
                 <li>
-                    Mantenha os componentes pequenos e reutilizáveis.
+                    Use o Storybook para revisar visualmente antes de dar merge.
                 </li>
                 <li>
-                    Consulte sempre a documentação oficial, que possui exemplos práticos e acessíveis.
+                    Atualize stories junto com os componentes, para evitar desatualização.
                 </li>
                 <li>
-                    Evite inline styles puros, prefira o uso da prop sx.
-                </li>
-                <li>
-                    Evite sobrescrever estilos com &quot;!important&quot;, prefira o uso de sx.
+                    Separe os arquivos stories por domínio (ex: ui, form, layout) para facilitar manutenção.
                 </li>
             </ul>
         </>
